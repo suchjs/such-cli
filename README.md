@@ -1,7 +1,11 @@
-# such-cli
-suchjs command line tool.
+# Such-cli
+[![npm version](https://badge.fury.io/js/such-cli.svg)](https://badge.fury.io/js/such-cli)
 
-## commands
+suchjs command line tool.
+## How to use
+> `yarn add --dev such-cli` or `npm install --save-dev such-cli` 
+
+## Commands
 initialize environment for suchjs.
 ```bash
 such init
