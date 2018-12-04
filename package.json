@@ -1,0 +1,51 @@
+{
+  "name": "such-cli",
+  "description": "suchjs command line.",
+  "version": "0.0.1",
+  "author": "jxz_211",
+  "main": "bin/such",
+  "bin": {
+    "such": "bin/such"
+  },
+  "keywords": [
+    "such-cli",
+    "suchjs command line",
+    "suchjs"
+  ],
+  "scripts": {
+    "start": "npx babel --watch lib/ --out-dir bin/",
+    "lint": "npx eslint --ext .js lib/",
+    "prepublish": "npx babel lib/ --out-dir bin/"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.2.0",
+    "chalk": "^2.4.1",
+    "cli-spinners": "^1.3.1",
+    "commander": "^2.19.0",
+    "inquirer": "^6.2.1",
+    "log-update": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.6",
+    "@babel/plugin-proposal-export-default-from": "^7.0.0",
+    "@babel/plugin-transform-arrow-functions": "^7.0.0",
+    "@babel/plugin-transform-async-to-generator": "^7.1.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.1.0",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/plugin-transform-shorthand-properties": "^7.0.0",
+    "@babel/plugin-transform-spread": "^7.0.0",
+    "@babel/plugin-transform-template-literals": "^7.0.0",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-stage-2": "^7.0.0",
+    "eslint": "^5.9.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/suchjs/such-cli"
+  },
+  "bugs": {
+    "url": "https://github.com/suchjs/such-cli/issues"
+  },
+  "license": "MIT"
+}

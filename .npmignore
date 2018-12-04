@@ -1,0 +1,15 @@
+# directories
+/node_modules
+/lib
+# system files
+.DS_Store
+# config files
+.vscode
+.babelrc
+.gitignore
+.travis.yml
+.eslintrc
+.eslintignore
+# package lock
+yarn.lock
+package-lock.json
