@@ -18,7 +18,7 @@ var _path = _interopRequireDefault(require("path"));
 
 var _child_process = require("child_process");
 
-var utils = _interopRequireWildcard(require("../utils.js"));
+var utils = _interopRequireWildcard(require("../helpers/utils"));
 
 var promisify = utils.promisify,
     LoadSpinner = utils.LoadSpinner;

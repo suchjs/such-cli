@@ -1,7 +1,7 @@
 {
   "name": "such-cli",
   "description": "suchjs command line.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "jxz_211",
   "main": "bin/such",
   "bin": {
@@ -9,8 +9,7 @@
   },
   "keywords": [
     "such-cli",
-    "suchjs command line",
-    "suchjs"
+    "suchjs command line"
   ],
   "scripts": {
     "start": "npx babel --watch lib/ --out-dir bin/",
