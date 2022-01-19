@@ -1,7 +1,6 @@
 {
   "extends": ["eslint:recommended"],
   "parserOptions": {
-    "ecmaVersion": 8,
     "sourceType": "module"
   },
   "rules": {
@@ -9,6 +8,6 @@
   },
   "env": {
     "node": true,
-    "es6": true
+    "es2020": true
   }
 }
