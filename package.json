@@ -1,12 +1,12 @@
 {
   "name": "such-cli",
-  "description": "suchjs command line.",
-  "version": "0.0.3",
+  "description": "A command line for generating fake data, and initialize the suchjs project.",
+  "version": "0.1.0",
   "author": "jxz_211",
   "type": "module",
-  "exports": "./bin/such",
+  "exports": "./bin/such.js",
   "bin": {
-    "such": "bin/such"
+    "such": "bin/such.js"
   },
   "engines": {
     "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
@@ -16,7 +16,9 @@
     "such-cli",
     "fake",
     "mock",
-    "cli"
+    "data",
+    "cli",
+    "command line"
   ],
   "scripts": {
     "lint": "npx eslint --ext .js lib/",
@@ -28,7 +30,7 @@
     "commander": "^8.3.0",
     "inquirer": "^8.2.0",
     "log-update": "^5.0.0",
-    "suchjs": "^2.1.1"
+    "suchjs": "^2.1.5"
   },
   "devDependencies": {
     "eslint": "^8.7.0"
