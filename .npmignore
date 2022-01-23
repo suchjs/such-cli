@@ -1,6 +1,5 @@
 # directories
 /node_modules
-/lib
 # system files
 .DS_Store
 # config files
