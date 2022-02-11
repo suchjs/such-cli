@@ -58,7 +58,7 @@ then you may got the output:
 
 ```javascript
 {
-  "a": ['kce', 'djakf', 'wpwds']
+  a: ['kce', 'djakf', 'wpwds']
 }
 ```
 
@@ -66,6 +66,14 @@ The output are printted by `console.log`, it may not a standard JSON format. If 
 
 ```bash
 npx such as test.json -s
+```
+
+then in the above example you will got the output:
+
+```javascript
+{
+  "a": ["kce", "djakf", "wpwds"]
+}
 ```
 
 
