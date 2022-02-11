@@ -1,8 +1,8 @@
 {
   "name": "such-cli",
-  "description": "A command line for generating fake data, and initialize the suchjs project.",
-  "version": "0.1.1",
-  "author": "jxz_211",
+  "description": "A command line tool for generating fake data, and can also initialize a suchjs project.",
+  "version": "0.1.2",
+  "author": "jxz_211@163.com",
   "type": "module",
   "exports": "./bin/such.js",
   "bin": {

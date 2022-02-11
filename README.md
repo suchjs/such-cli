@@ -58,9 +58,16 @@ then you may got the output:
 
 ```javascript
 {
-  "a": ["kce", "djakf", "wpwds"]
+  "a": ['kce', 'djakf', 'wpwds']
 }
 ```
+
+The output are printted by `console.log`, it may not a standard JSON format. If you want to get a JSON format output, you can use the `-s` or `--stringify` command line option.
+
+```bash
+npx such as test.json -s
+```
+
 
 
 ## Questions & Bugs?

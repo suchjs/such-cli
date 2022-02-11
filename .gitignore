@@ -1,3 +1,5 @@
-node_modules
-yarn.lock
+# node_modules
+node_modules/
+
+# use yarn
 package-lock.json
