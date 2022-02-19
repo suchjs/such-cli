@@ -10,7 +10,10 @@ Command line tool for generating fake data base on suchjs, and configure it too.
 Initialize the config for suchjs in node environment.
 
 ```bash
+# init suchjs config in local project
 such init
+# init command line suchjs config
+such init --cli # or -> such init -c
 ```
 
 ## Generate fake data
