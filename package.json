@@ -4,7 +4,7 @@
   "version": "0.2.1",
   "author": "jxz_211@163.com",
   "bin": {
-    "such": "bin/such"
+    "such": "bin/such.js"
   },
   "engines": {
     "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
@@ -21,7 +21,12 @@
   "scripts": {
     "lint": "npx eslint --ext .js lib/",
     "prepublish": "npm run lint",
-    "pkg": "rm -rf dist/* && pkg . -t node16-macos-x64 -o dist/such && tar -zcvf dist/such-$npm_package_version.tar.gz dist/such"
+    "pkg": "rm -rf dist/* && pkg . && mv dist/such-cli dist/such && tar -zcvf dist/such-$npm_package_version.tar.gz dist/such"
+  },
+  "pkg": {
+    "scripts": "bin/**/*",
+    "targets": ["node16-macos-x64"],
+    "outputPath": "dist"
   },
   "dependencies": {
     "chalk": "^4.1.2",
