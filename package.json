@@ -1,10 +1,8 @@
 {
   "name": "such-cli",
   "description": "A command line tool for generating fake data and initialize the suchjs config, customizable and powerful.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": "jxz_211@163.com",
-  "type": "module",
-  "exports": "./bin/such.js",
   "bin": {
     "such": "bin/such.js"
   },
@@ -22,18 +20,25 @@
   ],
   "scripts": {
     "lint": "npx eslint --ext .js lib/",
-    "prepublish": "npm run lint"
+    "prepublish": "npm run lint",
+    "pkg": "pkg . && tar -zcvf dist/such-$npm_package_version.tar.gz dist/such-cli"
   },
   "dependencies": {
-    "chalk": "^5.0.0",
+    "chalk": "^4.1.2",
     "cli-spinners": "^2.6.1",
     "commander": "^8.3.0",
     "inquirer": "^8.2.0",
-    "log-update": "^5.0.0",
     "suchjs": "^2.2.0"
   },
   "devDependencies": {
     "eslint": "^8.7.0"
+  },
+  "pkg": {
+    "targets": [
+      "node16-macos-x64"
+    ],
+    "outputPath": "dist",
+    "version": "$npm_package_version"
   },
   "repository": {
     "type": "git",

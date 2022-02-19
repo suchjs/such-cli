@@ -1,9 +1,6 @@
 #!/usr/bin/env node
-import { program } from 'commander/esm.mjs';
-import { createRequire } from "module";
-
-const requireJSON = createRequire(import.meta.url);
-const { version } = requireJSON('../package.json');
+const { program } = require('commander');
+const { version } = require('../package.json');
 
 program
 .version(version)

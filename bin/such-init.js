@@ -1,3 +1,3 @@
 #!/usr/bin/env node
 
-import '../lib/commands/such-init.js';
+require('../lib/commands/such-init.js');
