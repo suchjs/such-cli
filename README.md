@@ -3,7 +3,28 @@
 
 Command line tool for generating fake data base on suchjs, and configure it too.
 ## Installation
-> `yarn add --dev such-cli` or `npm install --save-dev such-cli` 
+
+### For project use suchjs library
+
+```bash 
+# npm
+npm install --save-dev such-cli
+# yarn
+yarn add -D such-cli
+# pnpm
+pnpm add -D such-cli
+```
+
+### For command line use `such`
+```bash 
+# npm
+npm install -g such-cli
+# yarn
+yarn global add such-cli
+# pnpm
+pnpm add -g such-cli
+```
+
 
 ## Initialize
 
