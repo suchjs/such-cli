@@ -8,4 +8,5 @@ program
 .command('as <struct>', 'Generate a fake data.', {
   isDefault: true
 })
+.command('serve', 'Run a mock server for requests.')
 .parse(process.argv);
