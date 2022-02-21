@@ -25,7 +25,9 @@
   },
   "pkg": {
     "scripts": "bin/**/*",
-    "targets": ["node16-macos-x64"],
+    "targets": [
+      "node16-macos-x64"
+    ],
     "outputPath": "dist"
   },
   "dependencies": {
