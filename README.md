@@ -94,13 +94,62 @@ npx such as test.json -s
 
 then in the above example you will got the output:
 
-```javascript
+```json
 {
   "a": ["kce", "djakf", "wpwds"]
 }
 ```
 
+## Run a mock server
 
+```bash
+# -p, --port: the server's listen port
+# -t, --timeout: the response's timeout, a specified number or a range for random
+# -d, --debug: print the debug information
+npx such serve -p 8080 -t 500,3000 -d
+```
+
+```json
+{
+  "types": {
+    "word": ["string", "[97,122]:{3,5}"]
+  },
+  "config": {
+    "suchDir": "suchas",
+    "dataDir": "suchas/data",
+    "extensions": [".json", ".txt"], // the file extesions need to match
+    "server": {
+      // default port 8181
+      // can set in the server config
+      // or overwrite by the command option --port
+      "port": 8181,
+      // the global prefix need to match from the pathname
+      // the last pathname will remove the prefix
+      // e.g. a pathname '/api/v1/hello/world'
+      // when the prefix is '/api/v1'
+      // at last, the left pathname will be 'hello/world'
+      "prefix": "",
+      // the directory saving the mock template file
+      // default is 'server', base on the suchDir
+      "directory": "server",
+      // the pathname segment will join by the splitter.
+      // so when the last pathname is 'hello/world'
+      // the mock template file's name should be 'hello.world'
+      // the file name and each the extension in the 'extensions' config 
+      // will determine a file need to be checked whether it exists in the serverDir  
+      "pathSegSplit": ".",
+      // when the file has an extension key in extContentTypes
+      // the response headers will add a Content-Type header with the value
+      "extContentTypes": {
+        ".json": "application/json"
+      },
+      // the timeout of the response for each request
+      // also can be defined in the command line option -t
+      "timeout": [],
+    }
+  }
+}
+```
 
 ## Questions & Bugs?
 
