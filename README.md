@@ -109,7 +109,7 @@ then in the above example you will got the output:
 npx such serve -p 8080 -t 500,3000 -d
 ```
 
-```json
+```javascript
 {
   "types": {
     "word": ["string", "[97,122]:{3,5}"]
