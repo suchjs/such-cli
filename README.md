@@ -106,7 +106,10 @@ then in the above example you will got the output:
 # -p, --port: the server's listen port
 # -t, --timeout: the response's timeout, a specified number or a range for random
 # -d, --debug: print the debug information
+# more options can seen by `such server --help`
+# the command line options can override the field configured in the such.config.js 
 npx such serve -p 8080 -t 500,3000 -d
+
 ```
 
 ```javascript
@@ -117,7 +120,8 @@ npx such serve -p 8080 -t 500,3000 -d
   "config": {
     "suchDir": "suchas",
     "dataDir": "suchas/data",
-    "extensions": [".json", ".txt"], // the file extesions need to match
+    // the file extesions need to search for matching
+    "extensions": [".json", ".txt"], 
     "server": {
       // default port 8181
       // can set in the server config
@@ -146,6 +150,15 @@ npx such serve -p 8080 -t 500,3000 -d
       // the timeout of the response for each request
       // also can be defined in the command line option -t
       "timeout": [],
+      // should inject the context as a 'ctx' into suchjs's config
+      // contains query and request body data
+      injectContext: false,
+      // if the handle is set
+      // you can set a keys config for such.a(options)
+      // that can generate an exact data what you want 
+      buildConfig: function(pathname, { query, data, method }, config){
+        // return a keys config
+      }
     }
   }
 }
