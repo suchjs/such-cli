@@ -930,10 +930,10 @@ strip-json-comments@^3.1.0, strip-json-comments@^3.1.1:
   resolved "https://registry.npmjs.org/strip-json-comments/-/strip-json-comments-3.1.1.tgz"
   integrity sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==
 
-suchjs@^2.2.2:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/suchjs/-/suchjs-2.2.2.tgz#f7911540b6f6bb3a5d5afc6f5900e44d8a3136ab"
-  integrity sha512-M6kuIfzW6J14vN/E/pzzLCtNN4N1qT9B5ymdSpR6Z0k2Sjs4UFOy/6zmdLJtFvSE1nZXD5bOVU6AQ9lOFItA7Q==
+suchjs@^2.2.3:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/suchjs/-/suchjs-2.2.3.tgz#22112864d9772b4d717af596d724384373654a53"
+  integrity sha512-8v/OjnECgZphKv/DWcb74jViaDP9akGHgWT1b7JWmOU/yulg4/yBNcsPhfrFsmPrbv3ZKC2nQq5Cz6mneBV2VA==
   dependencies:
     nprintf "^1.0.1"
     reregexp "^1.5.0"
