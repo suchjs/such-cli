@@ -1,0 +1,11 @@
+{
+  "errno:": [0, 1],
+  "errmsg": ":string:{10,30}",
+  "data?": {
+    "list{3,10}": {
+      "province": ":province",
+      "city": ":cascader:&./province",
+      "area": ":cascader:&./city"
+    }
+  }
+}
