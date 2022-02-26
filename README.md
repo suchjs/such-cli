@@ -163,6 +163,7 @@ npx such serve -p 8080 -t 500,3000 -d
   }
 }
 ```
+See the demo in the [examples](./examples/)
 
 ## Questions & Bugs?
 

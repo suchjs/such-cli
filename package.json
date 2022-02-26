@@ -1,7 +1,7 @@
 {
   "name": "such-cli",
   "description": "A command line tool for generating fake data and create a mock server, customizable and powerful.",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "author": "jxz_211@163.com",
   "bin": {
     "such": "bin/such.js"
@@ -38,7 +38,7 @@
     "commander": "^8.3.0",
     "inquirer": "^8.2.0",
     "multiparty": "^4.2.3",
-    "suchjs": "^2.2.3",
+    "suchjs": "^3.0.2",
     "type-is": "^1.6.18"
   },
   "devDependencies": {

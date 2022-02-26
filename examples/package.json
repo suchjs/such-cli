@@ -4,13 +4,12 @@
   "main": "index.js",
   "scripts": {
     "mock": "npx such serve -r . -d",
-    "dev": "webpack --mode=development --progress --watch",
     "serve": "webpack serve --mode=development"
   },
   "license": "MIT",
   "devDependencies": {
     "html-webpack-plugin": "^5.5.0",
-    "such-cli": "^0.3.2",
+    "such-cli": "^0.3.3",
     "webpack": "^5.69.1",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.4"

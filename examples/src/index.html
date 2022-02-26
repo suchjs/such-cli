@@ -5,15 +5,42 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>such-cli example</title>
+  <style>
+    #list ul,
+    #list li{
+      list-style: none;
+      margin:0;
+      padding:0;
+    }
+    #list ul{
+      border:1px solid #ddd;
+      text-align: center;
+    }
+    #list li{
+      border-top: 1px solid #ddd;
+      line-height: 2;
+    }
+    #list li:first-child{
+      border-top:none;
+    }
+    #list ul .col~.col{
+      border-left:1px solid #ddd;
+    }
+    #list li{
+      display: flex;
+      
+    }
+    #list li .col{
+      display: block;
+      flex: 1;
+    }
+  </style>
 </head>
 <body>
   <form>
-    <fieldset>
-      <legend>User Name</legend>
-      <div>
-        <input type="text" placeholder="please enter your user name" />
-      </div>
-    </fieldset>
+    <input type="text" placeholder="input new item" />
+    <button type="button" id="btn">Add new item</button>
   </form>
+  <div id="list"></div>
 </body>
 </html>
