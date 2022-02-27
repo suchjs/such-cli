@@ -106,9 +106,10 @@ then in the above example you will got the output:
 # -p, --port: the server's listen port
 # -t, --timeout: the response's timeout, a specified number or a range for random
 # -d, --debug: print the debug information
+# -w, --watch: watch the changes of the such.config.js or data files and start a hot reload. 
 # more options can seen by `such server --help`
 # the command line options can override the field configured in the such.config.js 
-npx such serve -p 8080 -t 500,3000 -d
+npx such serve -p 8080 -t 500,3000 -d -w
 
 ```
 
@@ -132,10 +133,19 @@ npx such serve -p 8080 -t 500,3000 -d
       // e.g. a pathname '/api/v1/hello/world'
       // when the prefix is '/api/v1'
       // at last, the left pathname will be 'hello/world'
+      // you can also set the prefix with exclude config just like nestjs
+      // prefix: ["/api/v1", {
+      //   // when the pathname is "/user/login" and "/user/reg" & method is post
+      //   exclude: ["user/login", { path: "user/reg", method: "post" }]
+      // }]
+      // 
       "prefix": "",
       // the directory saving the mock template file
       // default is 'server', base on the suchDir
       "directory": "server",
+      // whether watch the config file's change and start a hot reload 
+      // if truem, also watch the data files's changes and reload the datas. 
+      "watch": false,
       // the pathname segment will join by the splitter.
       // so when the last pathname is 'hello/world'
       // the mock template file's name should be 'hello.world'
@@ -157,7 +167,23 @@ npx such serve -p 8080 -t 500,3000 -d
       // you can set a keys config for such.a(options)
       // that can generate an exact data what you want 
       buildConfig: function(pathname, { query, data, method }, config){
-        // return a keys config
+        // return a data config the request
+        return {
+          // override the global timeout
+          timeout: 100,
+          // add external headers to response
+          headers: {
+            "From": "www.suchjs.com"
+          },
+          // config the suchInstance
+          instance: {
+            keys: {
+              "/data": {
+                exists: true
+              }
+            }
+          }
+        };
       }
     }
   }

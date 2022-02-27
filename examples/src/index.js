@@ -23,7 +23,7 @@ axios.get('/api/list/1', {
 });
 
 $('btn').addEventListener('click', function(){
-  axios.post('/api/list/1', {
+  axios.post('/list/1', {
   }).then((res) => {
     if(res.data && res.data.errno === 0){
       const { data } = res.data;

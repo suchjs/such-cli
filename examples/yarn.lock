@@ -2235,25 +2235,19 @@
   "resolved" "https://registry.npmjs.org/strip-final-newline/-/strip-final-newline-2.0.0.tgz"
   "version" "2.0.0"
 
-"such-cli@^0.3.2":
+"such-cli@file:..":
   "resolved" "file:.."
-  "version" "0.3.3"
+  "version" "0.3.4"
   dependencies:
     "chalk" "^4.1.2"
+    "chokidar" "^3.5.3"
     "cli-spinners" "^2.6.1"
     "co-body" "^6.1.0"
     "commander" "^8.3.0"
     "inquirer" "^8.2.0"
     "multiparty" "^4.2.3"
-    "suchjs" "^3.0.2"
+    "suchjs" "^3.0.3"
     "type-is" "^1.6.18"
-
-"suchjs@file:../../such":
-  "resolved" "file:../../such"
-  "version" "3.0.2"
-  dependencies:
-    "nprintf" "^1.0.1"
-    "reregexp" "^1.5.0"
 
 "supports-color@^8.0.0":
   "integrity" "sha512-MpUEN2OodtUzxvKQl72cUF7RQ5EiHsGvSsVG0ia9c5RbWGL2CI4C7EpPS8UTBIplnlzZiNuV56w+FuNxy3ty2Q=="

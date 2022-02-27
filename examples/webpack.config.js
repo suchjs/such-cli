@@ -16,6 +16,10 @@ module.exports = {
       [prefix]: {
         target: `http://localhost:${port}`,
         secure: false
+      },
+      '/list': {
+        target: `http://localhost:${port}`,
+        secure: false
       }
     }
   },

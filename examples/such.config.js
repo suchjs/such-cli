@@ -7,7 +7,13 @@ module.exports = {
     preload: true,
     server: {
       port: port,
-      prefix: prefix,
+      watch: true,
+      prefix: [prefix, {
+        exclude: [{
+          path: 'list/1',
+          method: 'post'
+        }]
+      }],
       directory: "server",
       pathSegSplit: ".",
       injectContexnt: true,
@@ -16,20 +22,33 @@ module.exports = {
         if (pathname === "list/1" && ctx.method === "get") {
           if (ctx.query("_t") % 3 === 1) {
             return {
-              "/errno": {
-                index: 1,
-              },
-              "/data": {
-                exist: false,
+              timeout: 200,
+              instance: {
+                keys: {
+                  "/errno": {
+                    index: 2,
+                  },
+                  "/data": {
+                    exist: false,
+                  },
+                },
               },
             };
           }
           return {
-            "/errno": {
-              index: 0,
+            timeout: [100, 300],
+            headers: {
+              "From": "www.suchjs.com"
             },
-            "/data": {
-              exist: true,
+            instance: {
+              keys: {
+                "/errno": {
+                  index: 0,
+                },
+                "/data": {
+                  exist: true,
+                },
+              },
             },
           };
         }
