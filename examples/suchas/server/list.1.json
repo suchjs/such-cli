@@ -3,6 +3,7 @@
   "errmsg": ":string:{10,30}",
   "data?": {
     "list{3,10}": {
+      "id": ":increment:#[start=(ctx.query.page?ctx.query.page-1:0)*10+1]",
       "province": ":province",
       "city": ":cascader:&./province",
       "area": ":cascader:&./city",
