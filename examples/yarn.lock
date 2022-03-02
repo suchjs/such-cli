@@ -2246,7 +2246,7 @@
     "commander" "^8.3.0"
     "inquirer" "^8.2.0"
     "multiparty" "^4.2.3"
-    "suchjs" "^3.0.4"
+    "suchjs" "^3.0.6"
     "type-is" "^1.6.18"
 
 "supports-color@^8.0.0":

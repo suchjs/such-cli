@@ -9,4 +9,5 @@ program
     isDefault: true,
   })
   .command("serve", "Run a mock server for requests.")
+  .command("template <pathaname>", "Create a mock template file by api information.")
   .parse(process.argv);
