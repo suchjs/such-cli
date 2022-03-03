@@ -1,7 +1,7 @@
 {
   "name": "such-cli",
-  "description": "A command line tool for generating fake data and create a mock server, customizable and powerful.",
-  "version": "0.3.5",
+  "description": "Run a mock server & Generate fake data & Initialize suchjs in command line.",
+  "version": "0.4.0",
   "author": "jxz_211@163.com",
   "bin": {
     "such": "bin/such.js"
@@ -10,14 +10,11 @@
     "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
   },
   "keywords": [
+    "mock",
+    "server",
     "cli",
     "fake",
-    "mock",
-    "data",
-    "server",
-    "suchjs",
-    "such-cli",
-    "command line"
+    "data"
   ],
   "scripts": {
     "lint": "npx eslint --ext .js lib/",

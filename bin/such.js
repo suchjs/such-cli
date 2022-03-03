@@ -9,5 +9,5 @@ program
     isDefault: true,
   })
   .command("serve", "Run a mock server for requests.")
-  .command("template <pathaname>", "Create a mock template file by api information.")
+  .command("template <action> <pathaname...>", "Manipulate a mock template file by request url's pathname.")
   .parse(process.argv);

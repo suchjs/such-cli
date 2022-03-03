@@ -191,6 +191,37 @@ npx such serve -p 8080 -t 500,3000 -d -w
 ```
 See the demo in the [examples](./examples/)
 
+### Manage mock template files
+
+```bash
+# Assume the pathSegSplit is '.' and first extension is '.json'
+###### Add ######
+# Create list.1.json list.2.json
+npx such template add list/1 list/2 -r .
+# Restful apis, create 
+# list/1/get.json, list/1/post.json
+# list/1/put.json, list/1/delete.json
+npx such template add list/1 -r . -m
+npx such template add list/1 -r . -m '*'
+# Create only get and post request template
+npx such template add list/1 -r . -m get post
+npx such template add list/1 -r . -m 'get,post'
+# Change extension
+npx such template add list/1 -r . -m get post -e '.js'
+###### Remove ######
+# Remove list.1.json list.2.json
+npx such template rm list/1 list/2 -r .
+# Just like `add` 
+# But also remove the directory list/1
+# And the file list.1.json if it exists.
+npx such template rm list/1 list/2 -r . -m
+npx such template rm list/1 -r . -m '*'
+# More usage just refer to the above `add` command
+###### View ######
+# view the mock template file's content
+npx such template view list/1 -e '.json' -m get -r .
+```
+
 ## Questions & Bugs?
 
 Welcome to report to us with issue if you meet any question or bug. [Issue](https://github.com/suchjs/such-cli/issues)

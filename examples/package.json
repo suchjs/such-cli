@@ -4,7 +4,10 @@
   "main": "index.js",
   "scripts": {
     "mock": "npx such serve -r . -d -i",
-    "serve": "webpack serve --mode=development"
+    "serve": "webpack serve --mode=development",
+    "add": "npx such template add -r . --",
+    "show": "npx such template show -r . --",
+    "rm": "npx such template rm -r . --"
   },
   "license": "MIT",
   "devDependencies": {
