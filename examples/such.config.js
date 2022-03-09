@@ -16,7 +16,7 @@ module.exports = {
       }],
       directory: "server",
       pathSegSplit: ".",
-      injectContexnt: true,
+      injectContext: true,
       timeout: [500, 1000],
       buildConfig: function (pathname, ctx) {
         if (pathname === "list/1" && ctx.method === "get") {
