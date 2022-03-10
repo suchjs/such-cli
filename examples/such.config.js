@@ -8,6 +8,7 @@ module.exports = {
     server: {
       port: port,
       watch: true,
+      cors: true,
       prefix: [prefix, {
         exclude: [{
           path: 'list/1',
@@ -26,7 +27,7 @@ module.exports = {
               instance: {
                 keys: {
                   "/errno": {
-                    index: 2,
+                    index: 1,
                   },
                   "/data": {
                     exist: false,
