@@ -144,8 +144,11 @@ npx such serve -p 8080 -t 500,3000 -d -w
       // default is 'server', base on the suchDir
       "directory": "server",
       // whether watch the config file's change and start a hot reload 
-      // if truem, also watch the data files's changes and reload the datas. 
+      // if true, also watch the data files's changes and reload the datas. 
       "watch": false,
+      // set the CORS to allow cross-domain requests.
+      // true | "*" | "https://foo.example" | ...
+      "cors": true,
       // the pathname segment will join by the splitter.
       // so when the last pathname is 'hello/world'
       // the mock template file's name should be 'hello.world'

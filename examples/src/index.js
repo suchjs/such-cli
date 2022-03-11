@@ -23,7 +23,9 @@ axios.get('/api/list/1', {
 });
 
 $('btn').addEventListener('click', function(){
-  axios.post('http://localhost:9000/list/1', {
+  document.cookie = "name=123";
+  axios.post('http://localhost:9000/list/1', {}, {
+    withCredentials: true
   }).then((res) => {
     if(res.data && res.data.errno === 0){
       const { data } = res.data;
