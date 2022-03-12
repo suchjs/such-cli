@@ -24,7 +24,7 @@ axios.get('/api/list/1', {
 
 $('btn').addEventListener('click', function(){
   document.cookie = "name=123";
-  axios.post('http://localhost:9000/list/1', {}, {
+  axios.post('http://localhost:9000/list/123', {}, {
     withCredentials: true
   }).then((res) => {
     if(res.data && res.data.errno === 0){

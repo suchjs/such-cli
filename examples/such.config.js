@@ -11,10 +11,15 @@ module.exports = {
       cors: true,
       prefix: [prefix, {
         exclude: [{
-          path: 'list/1',
+          path: /list(\/\d+)?/,
           method: 'post'
         }]
       }],
+      route: {
+        'list/:id?': {
+          method: 'post'
+        }
+      },
       directory: "server",
       pathSegSplit: ".",
       injectContext: true,

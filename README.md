@@ -160,6 +160,16 @@ npx such serve -p 8080 -t 500,3000 -d -w
       "extContentTypes": {
         ".json": "application/json"
       },
+      // dynamic routes or route rewrite
+      // without the global prefix if the global prefix
+      route: {
+        "/article/:id?": true,
+        "/user/:id?": {
+          method: "get",
+          rewrite: "/user/id"
+        },
+        "/product/:action/:id": "/product/done"
+      },
       // the timeout of the response for each request
       // also can be defined in the command line option -t
       "timeout": [],
