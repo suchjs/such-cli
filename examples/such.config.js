@@ -11,7 +11,7 @@ module.exports = {
       cors: true,
       prefix: [prefix, {
         exclude: [{
-          path: /list(\/\d+)?/,
+          path: "/list/:id?",
           method: 'post'
         }]
       }],

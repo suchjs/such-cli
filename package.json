@@ -1,7 +1,7 @@
 {
   "name": "such-cli",
   "description": "Run a mock server & Generate fake data & Initialize suchjs in command line.",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "author": "jxz_211@163.com",
   "bin": {
     "such": "bin/such.js"
