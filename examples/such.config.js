@@ -9,16 +9,21 @@ module.exports = {
       port: port,
       watch: true,
       cors: true,
-      prefix: [prefix, {
-        exclude: [{
-          path: "/list/:id?",
-          method: 'post'
-        }]
-      }],
+      prefix: [
+        prefix,
+        {
+          exclude: [
+            {
+              path: "/list/:id?",
+              method: "post",
+            },
+          ],
+        },
+      ],
       route: {
-        'list/:id?': {
-          method: 'post'
-        }
+        "list/:id?": {
+          method: "post",
+        },
       },
       directory: "server",
       pathSegSplit: ".",
@@ -26,35 +31,46 @@ module.exports = {
       timeout: [500, 1000],
       buildConfig: function (pathname, ctx) {
         if (pathname === "list/1" && ctx.method === "get") {
-          if (ctx.query("_t") % 3 === 1) {
-            return {
-              timeout: 200,
-              instance: {
-                keys: {
-                  "/errno": {
-                    index: 1,
-                  },
-                  "/data": {
-                    exist: false,
-                  },
-                },
-              },
-            };
-          }
           return {
             timeout: [100, 300],
             headers: {
-              "From": "www.suchjs.com"
+              From: "www.suchjs.com",
             },
             instance: {
-              keys: {
-                "/errno": {
-                  index: 0,
-                },
-                "/data": {
-                  exist: true,
+              config: {
+                dynamics: {
+                  "/errmsg": [
+                    "/errno",
+                    (errno) => {
+                      return {
+                        key: {
+                          exist: errno.value !== 0,
+                        },
+                      };
+                    },
+                  ],
+                  "/data": [
+                    "/errno",
+                    (errno) => {
+                      return {
+                        key: {
+                          exist: errno.value === 0,
+                        },
+                      };
+                    },
+                  ],
                 },
               },
+            },
+            options: {
+              // keys: {
+              //   "/errno": {
+              //     index: 0,
+              //   },
+              //   "/data": {
+              //     exist: true,
+              //   },
+              // },
             },
           };
         }

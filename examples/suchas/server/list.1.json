@@ -1,6 +1,6 @@
 {
   "errno:{1}": [0, 1],
-  "errmsg": ":string:{10,30}",
+  "errmsg?": ":string:{10,30}",
   "data?": {
     "list{3,10}": {
       "id": ":increment:#[start=(ctx.query.page?ctx.query.page-1:0)*10+1]",

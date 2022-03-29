@@ -1,7 +1,7 @@
 {
   "name": "such-cli",
-  "description": "Run a mock server & Generate fake data & Initialize suchjs in command line.",
-  "version": "0.4.3",
+  "description": "Run a local mock server & Generate fake data & Initialize suchjs in command line.",
+  "version": "0.5.0",
   "author": "jxz_211@163.com",
   "bin": {
     "such": "bin/such.js"
@@ -33,7 +33,7 @@
     "commander": "^8.3.0",
     "inquirer": "^8.2.0",
     "multiparty": "^4.2.3",
-    "suchjs": "^3.0.6",
+    "suchjs": "^3.1.1",
     "type-is": "^1.6.18"
   },
   "devDependencies": {

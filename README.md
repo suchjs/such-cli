@@ -188,8 +188,25 @@ npx such serve -p 8080 -t 500,3000 -d -w
           headers: {
             "From": "www.suchjs.com"
           },
-          // config the suchInstance
+          // set the instance's options
           instance: {
+            config: {
+              dynamics: {
+                // set the instance's dynamic options
+                // this means when errno's value is not zero
+                // the optional errmsg should exist, otherwise is not exist in the value
+                '/errmsg': ['/errno', (errno) => {
+                  return {
+                    key: {
+                      exist: errno.value !== 0
+                    }
+                  }
+                }]
+              }
+            }
+          },
+          // set the options of current instance's generation
+          options: {
             keys: {
               "/data": {
                 exists: true
